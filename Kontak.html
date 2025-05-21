@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontak Akiraa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <style>
+    /* Video background */
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.5);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      color: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* fallback kalau video gagal */
+      overflow-x: hidden;
+    }
+
+    .navbar-brand img {
+      border-radius: 50%;
+    }
+
+    main.container {
+      flex-grow: 1;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      background: rgba(0, 0, 50, 0.9); /* lebih solid, tanpa blur */
+      border-radius: 15px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      max-width: 600px;
+      margin: 3rem auto;
+      text-align: center;
+      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    h3 {
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #a5d8ff;
+      text-shadow: 0 0 6px #72b8ff;
+    }
+
+    .contact-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px 25px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
+      cursor: default;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .contact-item:nth-of-type(1) { animation-delay: 0.2s; }
+    .contact-item:nth-of-type(2) { animation-delay: 0.4s; }
+    .contact-item:nth-of-type(3) { animation-delay: 0.6s; }
+    .contact-item:nth-of-type(4) { animation-delay: 0.8s; }
+    .contact-item:nth-of-type(5) { animation-delay: 1s; }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-icon {
+      font-size: 2rem;
+      color: #4ea8de;
+      flex-shrink: 0;
+      transition: color 0.3s ease;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    .contact-item:hover .contact-icon {
+      color: #90caf9;
+    }
+
+    .contact-text {
+      flex-grow: 1;
+      font-size: 1.25rem;
+      color: #e1e7f0;
+      word-break: break-word;
+      text-align: left;
+    }
+
+    a.contact-link {
+      color: #90caf9;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    a.contact-link:hover {
+      text-decoration: underline;
+      color: #cfe3fc;
+    }
+
+    .navbar,
+    footer {
+      background-color: #3399ff !important;
+    }
+
+    footer {
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      color: white;
+      margin-top: auto;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #4ea8de;
+      }
+      to {
+        text-shadow: 0 0 15px #a5d8ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="furina3.mp4" type="video/mp4" />
+    Browser kamu tidak mendukung video latar belakang.
+  </video>
+
+  <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="logosmk.png" alt="logo" width="35" height="35" class="d-inline-block me-2" />
+        <strong>SMK 1 SIJUNJUNG</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="biodata.html">Biodata</a></li>
+          <li class="nav-item"><a class="nav-link active" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h3>Hubungi Saya</h3>
+
+    <div class="contact-item">
+      <span class="contact-icon" aria-label="Email">📧</span>
+      <div class="contact-text">
+        <strong>Email:</strong>
+        <a class="contact-link" href="mailto:muhammadarsyadalfarisy27@gmail.com">muhammadarsyadalfarisy27@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <span class="contact-icon" aria-label="Telepon">📞</span>
+      <div class="contact-text">
+        <strong>Telepon:</strong> +62 857-6237-1002
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <span class="contact-icon" aria-label="Lokasi">📍</span>
+      <div class="contact-text">
+        <strong>Lokasi:</strong> Sijunjung, ID
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <span class="contact-icon" aria-label="Instagram">📸</span>
+      <div class="contact-text">
+        <strong>Instagram:</strong>
+        <a class="contact-link" href="https://instagram.com/syad_still_life" target="_blank" rel="noopener noreferrer">Akiraa</a>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <span class="contact-icon" aria-label="TikTok">🎵</span>
+      <div class="contact-text">
+        <strong>TikTok:</strong>
+        <a class="contact-link" href="https://www.tiktok.com/@its_fine_syad" target="_blank" rel="noopener noreferrer">@akirakita</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    2025 Akiraxx - Thame
+  </footer>
+</body>
+</html>

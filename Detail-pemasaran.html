@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pemasaran - SMK Negeri 1 Sijunjung</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Segoe UI', sans-serif;
+      height: 100%;
+      overflow-x: hidden;
+      color: white;
+    }
+
+    #bgVideo {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+
+    .navbar {
+      background-color: rgba(51, 153, 255, 0.8) !important;
+    }
+
+    .nav-link, .navbar-brand {
+      color: white !important;
+    }
+
+    .section-title, .section-title1 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #87cefa;
+      text-shadow: 0 0 5px #3399ff;
+    }
+
+    .footer {
+      background-color: rgba(51, 153, 255, 0.9);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    .row {
+      padding-left: 15px;
+    }
+
+    .img-fluid {
+      border: 2px solid #3399ff;
+      transition: transform 0.3s ease;
+    }
+
+    .img-fluid:hover {
+      transform: scale(1.05);
+    }
+
+    .section-title2 {
+      margin-top: 0px;
+      margin-bottom: 20px;
+      margin-left: 5px;
+      padding-left: 10px;
+      text-shadow: 0 0 5px #3399ff;
+      color: #87cefa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video Background -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="furina3.mp4" type="video/mp4" />
+    Browser Anda tidak mendukung video ini.
+  </video>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="logosmk.png" alt="logo" width="35" height="35" class="d-inline-block me-2 rounded-circle" />
+        <strong>SMK 1 SIJUNJUNG</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="biodata.html">Biodata</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Konten -->
+  <div class="container mt-5">
+    <h1 class="text-center text-primary mb-4">Pemasaran</h1>
+
+    <section>
+      <h2 class="section-title">Deskripsi Jurusan</h2>
+      <p>
+        Jurusan Pemasaran di SMK Negeri 1 Sijunjung membekali siswa dengan kemampuan di bidang penjualan, komunikasi bisnis, pelayanan pelanggan, dan pengelolaan bisnis ritel. Siswa juga diajarkan strategi pemasaran digital yang modern.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Mata Pelajaran dan Fasilitas Pendukung</h2>
+      <h5>Mata Pelajaran Kejuruan:</h5>
+      <ul>
+        <li>Dasar-dasar Pemasaran</li>
+        <li>Perencanaan Bisnis</li>
+        <li>Penataan Produk</li>
+        <li>Pelayanan Prima</li>
+        <li>Pemasaran Online dan E-commerce</li>
+        <li>Komunikasi Bisnis dan Negosiasi</li>
+      </ul>
+
+      <h5>Fasilitas Pendukung:</h5>
+      <ul>
+        <li>Laboratorium Bisnis dan Ritel</li>
+        <li>Mini market untuk praktik langsung</li>
+        <li>Komputer dan software penjualan</li>
+        <li>Kerja sama industri lokal</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">Peluang Karier</h2>
+      <p>Lulusan jurusan Pemasaran dapat menjadi:</p>
+      <ul>
+        <li>Sales Executive / Marketing Officer</li>
+        <li>Customer Service</li>
+        <li>Manajer Toko / Usaha Ritel</li>
+        <li>Pengelola Marketplace</li>
+        <li>Wirausaha Mandiri</li>
+        <li>Melanjutkan pendidikan tinggi di bidang ekonomi atau bisnis</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">Prestasi dan Kegiatan</h2>
+      <p>
+        Jurusan Pemasaran aktif mengikuti berbagai kegiatan dan lomba, seperti:
+      </p>
+      <ul>
+        <li>Lomba Kompetensi Siswa (LKS)</li>
+        <li>Pameran dan bazar produk siswa</li>
+        <li>Magang di perusahaan ritel</li>
+        <li>Pelatihan digital marketing</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Galeri -->
+  <section>
+    <h2 class="section-title2">Galeri Pemasaran</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <img src="pemasaran picture1.jpg" class="img-fluid rounded shadow" alt="Kegiatan 1" />
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="pemasaran picture2.jpg" class="img-fluid rounded shadow" alt="Kegiatan 2" />
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="pemasaran picture3.jpg" class="img-fluid rounded shadow" alt="Kegiatan 3" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Akiraxx - Thame
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
